@@ -1,0 +1,315 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/jobs
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"job_id":"AC_ACCOUNT","job_title":"Public Accountant","min_salary":"4200","max_salary":"9500"},{"job_id":"AC_MGR","job_title":"Accounting Manager","min_salary":"8200","max_salary":"16000"},{"job_id":"AD_ASST","job_title":"Administration Assistant","min_salary":"3000","max_salary":"6000"},{"job_id":"AD_PRES","job_title":"President","min_salary":"20000","max_salary":"40000"},{"job_id":"AD_VP","job_title":"Administration Vice President","min_salary":"15000","max_salary":"30000"},{"job_id":"FI_ACCOUNT","job_title":"Accountant","min_salary":"4200","max_salary":"9000"},{"job_id":"FI_MGR","job_title":"Finance Manager","min_salary":"8200","max_salary":"16000"},{"job_id":"HR_REP","job_title":"Human Resources Representative","min_salary":"4000","max_salary":"9000"},{"job_id":"IT_PROG","job_title":"Programmer","min_salary":"4000","max_salary":"10000"},{"job_id":"J1001","job_title":"Software Engineer","min_salary":"60000","max_salary":"120000"},{"job_id":"J10013","job_title":"Software Engineer","min_salary":"60000","max_salary":"120000"},{"job_id":"MK_MAN","job_title":"Marketing Manager","min_salary":"9000","max_salary":"15000"},{"job_id":"MK_REP","job_title":"Marketing Representative","min_salary":"4000","max_salary":"9000"},{"job_id":"PR_REP","job_title":"Public Relations Representative","min_salary":"4500","max_salary":"10500"},{"job_id":"PU_CLERK","job_title":"Purchasing Clerk","min_salary":"2500","max_salary":"5500"},{"job_id":"PU_MAN","job_title":"Purchasing Manager","min_salary":"8000","max_salary":"15000"},{"job_id":"SA_MAN","job_title":"Sales Manager","min_salary":"10000","max_salary":"20000"},{"job_id":"SA_REP","job_title":"Sales Representative","min_salary":"6000","max_salary":"12000"},{"job_id":"SH_CLERK","job_title":"Shipping Clerk","min_salary":"2500","max_salary":"5500"},{"job_id":"ST_CLERK","job_title":"Stock Clerk","min_salary":"2000","max_salary":"5000"},{"job_id":"ST_MAN","job_title":"Stock Manager","min_salary":"5500","max_salary":"8500"},{"job_id":"TEST","job_title":"Test","min_salary":"100","max_salary":"1500"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/jobs
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      job_id:
+        name: job_id
+        description: 'Must not be greater than 10 characters.'
+        required: true
+        example: nhggfuxnt
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      job_title:
+        name: job_title
+        description: 'Must not be greater than 35 characters.'
+        required: true
+        example: kslqtyezjw
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_salary:
+        name: min_salary
+        description: 'Must be at least 0.'
+        required: false
+        example: 70
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      max_salary:
+        name: max_salary
+        description: 'Must be at least 0.'
+        required: false
+        example: 58
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      job_id: nhggfuxnt
+      job_title: kslqtyezjw
+      min_salary: 70
+      max_salary: 58
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/jobs/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job.'
+        required: true
+        example: AC_ACCOUNT
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: AC_ACCOUNT
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"job_id":"AC_ACCOUNT","job_title":"Public Accountant","min_salary":"4200","max_salary":"9500"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/jobs/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job.'
+        required: true
+        example: AC_ACCOUNT
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: AC_ACCOUNT
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      job_title:
+        name: job_title
+        description: 'Must not be greater than 35 characters.'
+        required: true
+        example: rthgjkvwhubbjbwcnzkbxdmhg
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      min_salary:
+        name: min_salary
+        description: 'Must be at least 0.'
+        required: false
+        example: 47
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      max_salary:
+        name: max_salary
+        description: 'Must be at least 0.'
+        required: false
+        example: 56
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      job_title: rthgjkvwhubbjbwcnzkbxdmhg
+      min_salary: 47
+      max_salary: 56
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/jobs/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job.'
+        required: true
+        example: AC_ACCOUNT
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: AC_ACCOUNT
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

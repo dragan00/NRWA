@@ -1,0 +1,302 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "b78f09f6-a31f-4c41-bda3-fd4a5e2d506c",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/jobs",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/jobs",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/jobs"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[{\"job_id\":\"AC_ACCOUNT\",\"job_title\":\"Public Accountant\",\"min_salary\":\"4200\",\"max_salary\":\"9500\"},{\"job_id\":\"AC_MGR\",\"job_title\":\"Accounting Manager\",\"min_salary\":\"8200\",\"max_salary\":\"16000\"},{\"job_id\":\"AD_ASST\",\"job_title\":\"Administration Assistant\",\"min_salary\":\"3000\",\"max_salary\":\"6000\"},{\"job_id\":\"AD_PRES\",\"job_title\":\"President\",\"min_salary\":\"20000\",\"max_salary\":\"40000\"},{\"job_id\":\"AD_VP\",\"job_title\":\"Administration Vice President\",\"min_salary\":\"15000\",\"max_salary\":\"30000\"},{\"job_id\":\"FI_ACCOUNT\",\"job_title\":\"Accountant\",\"min_salary\":\"4200\",\"max_salary\":\"9000\"},{\"job_id\":\"FI_MGR\",\"job_title\":\"Finance Manager\",\"min_salary\":\"8200\",\"max_salary\":\"16000\"},{\"job_id\":\"HR_REP\",\"job_title\":\"Human Resources Representative\",\"min_salary\":\"4000\",\"max_salary\":\"9000\"},{\"job_id\":\"IT_PROG\",\"job_title\":\"Programmer\",\"min_salary\":\"4000\",\"max_salary\":\"10000\"},{\"job_id\":\"J1001\",\"job_title\":\"Software Engineer\",\"min_salary\":\"60000\",\"max_salary\":\"120000\"},{\"job_id\":\"J10013\",\"job_title\":\"Software Engineer\",\"min_salary\":\"60000\",\"max_salary\":\"120000\"},{\"job_id\":\"MK_MAN\",\"job_title\":\"Marketing Manager\",\"min_salary\":\"9000\",\"max_salary\":\"15000\"},{\"job_id\":\"MK_REP\",\"job_title\":\"Marketing Representative\",\"min_salary\":\"4000\",\"max_salary\":\"9000\"},{\"job_id\":\"PR_REP\",\"job_title\":\"Public Relations Representative\",\"min_salary\":\"4500\",\"max_salary\":\"10500\"},{\"job_id\":\"PU_CLERK\",\"job_title\":\"Purchasing Clerk\",\"min_salary\":\"2500\",\"max_salary\":\"5500\"},{\"job_id\":\"PU_MAN\",\"job_title\":\"Purchasing Manager\",\"min_salary\":\"8000\",\"max_salary\":\"15000\"},{\"job_id\":\"SA_MAN\",\"job_title\":\"Sales Manager\",\"min_salary\":\"10000\",\"max_salary\":\"20000\"},{\"job_id\":\"SA_REP\",\"job_title\":\"Sales Representative\",\"min_salary\":\"6000\",\"max_salary\":\"12000\"},{\"job_id\":\"SH_CLERK\",\"job_title\":\"Shipping Clerk\",\"min_salary\":\"2500\",\"max_salary\":\"5500\"},{\"job_id\":\"ST_CLERK\",\"job_title\":\"Stock Clerk\",\"min_salary\":\"2000\",\"max_salary\":\"5000\"},{\"job_id\":\"ST_MAN\",\"job_title\":\"Stock Manager\",\"min_salary\":\"5500\",\"max_salary\":\"8500\"},{\"job_id\":\"TEST\",\"job_title\":\"Test\",\"min_salary\":\"100\",\"max_salary\":\"1500\"}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/jobs",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/jobs",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/jobs"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"job_id\":\"nhggfuxnt\",\"job_title\":\"kslqtyezjw\",\"min_salary\":70,\"max_salary\":58}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/jobs\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/jobs\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/jobs\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "AC_ACCOUNT",
+                                    "description": "The ID of the job."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"job_id\":\"AC_ACCOUNT\",\"job_title\":\"Public Accountant\",\"min_salary\":\"4200\",\"max_salary\":\"9500\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/jobs\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/jobs\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/jobs\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "AC_ACCOUNT",
+                                    "description": "The ID of the job."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"job_title\":\"rthgjkvwhubbjbwcnzkbxdmhg\",\"min_salary\":47,\"max_salary\":56}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE api\/jobs\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/jobs\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/jobs\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "AC_ACCOUNT",
+                                    "description": "The ID of the job."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

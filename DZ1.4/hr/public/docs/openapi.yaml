@@ -1,0 +1,281 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/jobs:
+    get:
+      summary: ''
+      operationId: getApiJobs
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    job_id: AC_ACCOUNT
+                    job_title: 'Public Accountant'
+                    min_salary: '4200'
+                    max_salary: '9500'
+                  -
+                    job_id: AC_MGR
+                    job_title: 'Accounting Manager'
+                    min_salary: '8200'
+                    max_salary: '16000'
+                  -
+                    job_id: AD_ASST
+                    job_title: 'Administration Assistant'
+                    min_salary: '3000'
+                    max_salary: '6000'
+                  -
+                    job_id: AD_PRES
+                    job_title: President
+                    min_salary: '20000'
+                    max_salary: '40000'
+                  -
+                    job_id: AD_VP
+                    job_title: 'Administration Vice President'
+                    min_salary: '15000'
+                    max_salary: '30000'
+                  -
+                    job_id: FI_ACCOUNT
+                    job_title: Accountant
+                    min_salary: '4200'
+                    max_salary: '9000'
+                  -
+                    job_id: FI_MGR
+                    job_title: 'Finance Manager'
+                    min_salary: '8200'
+                    max_salary: '16000'
+                  -
+                    job_id: HR_REP
+                    job_title: 'Human Resources Representative'
+                    min_salary: '4000'
+                    max_salary: '9000'
+                  -
+                    job_id: IT_PROG
+                    job_title: Programmer
+                    min_salary: '4000'
+                    max_salary: '10000'
+                  -
+                    job_id: J1001
+                    job_title: 'Software Engineer'
+                    min_salary: '60000'
+                    max_salary: '120000'
+                  -
+                    job_id: J10013
+                    job_title: 'Software Engineer'
+                    min_salary: '60000'
+                    max_salary: '120000'
+                  -
+                    job_id: MK_MAN
+                    job_title: 'Marketing Manager'
+                    min_salary: '9000'
+                    max_salary: '15000'
+                  -
+                    job_id: MK_REP
+                    job_title: 'Marketing Representative'
+                    min_salary: '4000'
+                    max_salary: '9000'
+                  -
+                    job_id: PR_REP
+                    job_title: 'Public Relations Representative'
+                    min_salary: '4500'
+                    max_salary: '10500'
+                  -
+                    job_id: PU_CLERK
+                    job_title: 'Purchasing Clerk'
+                    min_salary: '2500'
+                    max_salary: '5500'
+                  -
+                    job_id: PU_MAN
+                    job_title: 'Purchasing Manager'
+                    min_salary: '8000'
+                    max_salary: '15000'
+                  -
+                    job_id: SA_MAN
+                    job_title: 'Sales Manager'
+                    min_salary: '10000'
+                    max_salary: '20000'
+                  -
+                    job_id: SA_REP
+                    job_title: 'Sales Representative'
+                    min_salary: '6000'
+                    max_salary: '12000'
+                  -
+                    job_id: SH_CLERK
+                    job_title: 'Shipping Clerk'
+                    min_salary: '2500'
+                    max_salary: '5500'
+                  -
+                    job_id: ST_CLERK
+                    job_title: 'Stock Clerk'
+                    min_salary: '2000'
+                    max_salary: '5000'
+                  -
+                    job_id: ST_MAN
+                    job_title: 'Stock Manager'
+                    min_salary: '5500'
+                    max_salary: '8500'
+                  -
+                    job_id: TEST
+                    job_title: Test
+                    min_salary: '100'
+                    max_salary: '1500'
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: ''
+      operationId: postApiJobs
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_id:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: nhggfuxnt
+                job_title:
+                  type: string
+                  description: 'Must not be greater than 35 characters.'
+                  example: kslqtyezjw
+                min_salary:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 70
+                max_salary:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 58
+              required:
+                - job_id
+                - job_title
+      security: []
+  '/api/jobs/{id}':
+    get:
+      summary: ''
+      operationId: getApiJobsId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  job_id: AC_ACCOUNT
+                  job_title: 'Public Accountant'
+                  min_salary: '4200'
+                  max_salary: '9500'
+                properties:
+                  job_id:
+                    type: string
+                    example: AC_ACCOUNT
+                  job_title:
+                    type: string
+                    example: 'Public Accountant'
+                  min_salary:
+                    type: string
+                    example: '4200'
+                  max_salary:
+                    type: string
+                    example: '9500'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiJobsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_title:
+                  type: string
+                  description: 'Must not be greater than 35 characters.'
+                  example: rthgjkvwhubbjbwcnzkbxdmhg
+                min_salary:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 47
+                max_salary:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 56
+              required:
+                - job_title
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiJobsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the job.'
+        example: AC_ACCOUNT
+        required: true
+        schema:
+          type: string
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
